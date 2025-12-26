@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap');
+
+:root{
+  --black: #000;
+  --orange: orange;
+  --light-color: #666;
+  --box-shadow: 2px 2px 12px rgba(0,0,0,.18);
+}
+
+/* Reset */
+*{
+  font-family: 'Andika', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: none;
+  transition: all .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #fff;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  padding: 0 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.header .logo img {
+  margin-top: 10px;
+  height: 5rem;
+  width: 65%;
+  display: inline-block;
+}
+
+.headbar a {
+  margin: 0 1.5rem;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.headbar a.active {
+  color: #0070fa;
+}
+
+.headbar a:hover {
+  color: #fff;
+  background: linear-gradient(120deg,#FAB2FF 40%, #663399);
+  padding: .6rem 1rem;
+  border-radius: 2rem;
+}
+
+.header .menubtn button {
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Main section */
+.top {
+  min-height: calc(100vh - 100px);
+  padding: 130px 5% 4rem;       /* space for navbar + page padding */
+  background: #f7f9fc;
+}
+
+/* Heading centered under navbar */
+.container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.container .heading {
+  color: #5969C2;
+  font-size: 3rem;
+}
+
+.container .underline {
+  display: inline-block;
+  width: 220px;
+  height: 3px;
+  margin-top: .8rem;
+  background: #5969C2;
+  border-radius: 999px;
+}
+
+/* Product card area */
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2.4rem;          /* gap between cards */
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Individual card */
+.box {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem 2.2rem;
+  width: 280px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;   /* so button can be pushed to bottom */
+}
+
+/* Image */
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: .8rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Text content */
+.box .title {
+  font-size: 1.6rem;
+  margin-bottom: .4rem;
+}
+
+.box .price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: .2rem;
+}
+
+.box .desc {
+  font-size: 1.3rem;
+  color: var(--light-color);
+  margin-bottom: .8rem;
+}
+
+/* Button pinned to bottom and same width */
+.box .btn {
+  margin-top: auto;            /* pushes button to bottom */
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.9rem 0;
+  font-size: 1.4rem;
+  color: #fff;
+  background-image: linear-gradient(to right,#649bff,#0070fa,#649bff);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.box .btn:hover {
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 2rem;
+  }
+
+  .headbar {
+    display: none;
+  }
+
+  .top {
+    padding: 120px 1.6rem 3rem;
+  }
+}
