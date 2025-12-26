@@ -138,25 +138,58 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header {
-    padding: 0 2rem;
+    height: 7rem;
+    padding: 0 1.6rem;
+  }
+
+  .header .logo img {
+    height: 4.2rem;
   }
 
   .headbar {
-    display: none; /* simple mobile: hide links (can build menu later) */
+    display: none; /* later: replace with hamburger menu */
+  }
+
+  .menubtn button {
+    padding: 0.7rem 1.8rem;
+    font-size: 1.3rem;
   }
 
   .main {
-    flex-direction: column-reverse;
-    padding: 10rem 2rem 4rem;
-    text-align: center;
+    flex-direction: column-reverse;   /* image below text */
+    padding: 9rem 1.8rem 3.5rem;      /* less side padding */
+    text-align: left;
+    gap: 2.4rem;
   }
 
-  .main .left,
   .main .right {
     justify-content: center;
   }
 
+  .main .right img {
+    max-width: 90%;
+  }
+
+  .main .left h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
   .main .left h1 {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    line-height: 1.35;
+    margin-bottom: 1.2rem;
+  }
+
+  .main .left p {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .main .left button {
+    width: auto;
+    padding: 1rem 2.4rem;
+    font-size: 1.3rem;
   }
 }
+
